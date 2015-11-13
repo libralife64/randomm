@@ -1,1 +1,81 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_if" id="124" inline="false" x="-16" y="-44">
+    <value name="IF0">
+      <block type="math_arithmetic" id="150" inline="true">
+        <field name="OP">ADD</field>
+        <value name="A">
+          <block type="math_random" id="166"></block>
+        </value>
+        <value name="B">
+          <block type="math_random" id="167"></block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="movement_forward" id="134">
+        <next>
+          <block type="oled_color" id="211">
+            <field name="OBJECT">GREEN</field>
+            <next>
+              <block type="oled_linerect" id="226">
+                <field name="OBJECT">RECT</field>
+                <next>
+                  <block type="robot_delay" id="265" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="303">
+                        <field name="NUM">5000</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="controls_if" id="407" inline="false">
+        <value name="IF0">
+          <block type="sensor_object" id="310">
+            <field name="OBJECT">LEFTFRONT</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="movement_forward" id="446">
+            <next>
+              <block type="robot_delay" id="455" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="469">
+                    <field name="NUM">500</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="movement_right" id="363"></block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="controls_if" id="408" inline="false">
+            <value name="IF0">
+              <block type="sensor_object" id="409">
+                <field name="OBJECT">LEFTSIDE</field>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="movement_right" id="430"></block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="movement_reverse" id="346" x="-122" y="69">
+    <next>
+      <block type="movement_stop" id="335"></block>
+    </next>
+  </block>
+  <block type="movement_forward" id="236" x="-192" y="95"></block>
+</xml>
