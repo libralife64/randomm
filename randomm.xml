@@ -1,28 +1,28 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="124" inline="false" x="-16" y="-44">
+  <block type="controls_if" id="1" inline="false" x="-16" y="-44">
     <value name="IF0">
-      <block type="math_arithmetic" id="150" inline="true">
+      <block type="math_arithmetic" id="2" inline="true">
         <field name="OP">ADD</field>
         <value name="A">
-          <block type="math_random" id="166"></block>
+          <block type="math_random" id="3"></block>
         </value>
         <value name="B">
-          <block type="math_random" id="167"></block>
+          <block type="math_random" id="4"></block>
         </value>
       </block>
     </value>
     <statement name="DO0">
-      <block type="movement_forward" id="134">
+      <block type="movement_forward" id="5">
         <next>
-          <block type="oled_color" id="211">
+          <block type="oled_color" id="6">
             <field name="OBJECT">GREEN</field>
             <next>
-              <block type="oled_linerect" id="226">
+              <block type="oled_linerect" id="7">
                 <field name="OBJECT">RECT</field>
                 <next>
-                  <block type="robot_delay" id="265" inline="true">
+                  <block type="robot_delay" id="8" inline="true">
                     <value name="DELAY">
-                      <block type="math_number" id="303">
+                      <block type="math_number" id="9">
                         <field name="NUM">5000</field>
                       </block>
                     </value>
@@ -35,47 +35,47 @@
       </block>
     </statement>
     <next>
-      <block type="controls_if" id="407" inline="false">
+      <block type="controls_if" id="10" inline="false">
         <value name="IF0">
-          <block type="sensor_object" id="310">
+          <block type="sensor_object" id="11">
             <field name="OBJECT">LEFTFRONT</field>
           </block>
         </value>
         <statement name="DO0">
-          <block type="movement_forward" id="446">
+          <block type="movement_forward" id="12">
             <next>
-              <block type="robot_delay" id="455" inline="true">
+              <block type="robot_delay" id="13" inline="true">
                 <value name="DELAY">
-                  <block type="math_number" id="469">
+                  <block type="math_number" id="14">
                     <field name="NUM">500</field>
                   </block>
                 </value>
                 <next>
-                  <block type="movement_right" id="363"></block>
+                  <block type="movement_right" id="15"></block>
                 </next>
               </block>
             </next>
           </block>
         </statement>
         <next>
-          <block type="controls_if" id="408" inline="false">
+          <block type="controls_if" id="16" inline="false">
             <value name="IF0">
-              <block type="sensor_object" id="409">
+              <block type="sensor_object" id="17">
                 <field name="OBJECT">LEFTSIDE</field>
               </block>
             </value>
             <statement name="DO0">
-              <block type="movement_right" id="430"></block>
+              <block type="movement_right" id="18"></block>
             </statement>
           </block>
         </next>
       </block>
     </next>
   </block>
-  <block type="movement_reverse" id="346" x="-122" y="69">
+  <block type="movement_reverse" id="19" x="-122" y="69">
     <next>
-      <block type="movement_stop" id="335"></block>
+      <block type="movement_stop" id="20"></block>
     </next>
   </block>
-  <block type="movement_forward" id="236" x="-192" y="95"></block>
+  <block type="movement_forward" id="21" x="-192" y="95"></block>
 </xml>
